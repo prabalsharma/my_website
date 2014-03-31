@@ -12,6 +12,32 @@ To view your global settings for many tools can be found in your system's home d
 vim ~/.gitconfig
 vim $HOME/.gitconfig
 ```  
+Example .gitconfig  
+```bash
+[color]
+  ui = true
+[color "branch"]
+  current = green reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[user]
+  name = drew
+  email = 123and@gmail.com
+[push]
+  default = matching
+[core]
+  autocrlf = input
+```  
 Dotfiles are files beginning with a dot (.), which are 'hidden files' and are generally used for customizing settings.  
   
 We use terminal a lot when developing. Bash (the Bourne Again Shell) is a shell we use in the
