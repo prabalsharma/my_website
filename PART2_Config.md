@@ -241,4 +241,22 @@ remote, then request that it be merged to the master branch.
   
 If we want to pull any changes that may have been merged with master
 since we last pulled from the remote origin, we can do `git pull origin
-master`.
+master`.  
+  
+Git fetch acts a little differently. When we 'fetch' we pull the latest
+changes and are able to checkout other branches, or merge. Typically, we
+can do  
+```bash
+git fetch
+git rebase origin/master
+```  
+***Note***  
+```bash
+git pull = git fetch + git merge              # against tracking upstream branch.
+
+git pull --rebase =  git fetch + git rebase   # against tracking upstream
+branch.
+```  
+We can use `git pull --rebase` as a shorthand for this.  
+  
+
