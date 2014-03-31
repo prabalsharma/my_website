@@ -56,8 +56,7 @@ information](http://www.thegeekstuff.com/2008/09/bash-shell-ps1-10-examples-to-m
 # USAGE:
 #
 #   1. Save this file as ~/.git_svn_bash_prompt
-#   2. Add the following line to the end of your ~/.profile or
-~/.bash_profile:
+#   2. Add the following line to the end of your ~/.profile or ~/.bash_profile:
 #        . ~/.git_svn_bash_prompt
 #
 # AUTHOR:
@@ -131,8 +130,7 @@ function set_git_branch {
   BRANCH="${state}(${branch})${remote}${COLOR_NONE} "
 }
  
-# Determine the branch information for this subversion repository. No
-support
+# Determine the branch information for this subversion repository. No support
 # for svn status, since that needs to hit the remote repository.
 function set_svn_branch {
   # Capture the output of the "git status" command.
@@ -151,8 +149,7 @@ function set_svn_branch {
   BRANCH="(${branch}) "
 }
  
-# Return the prompt symbol to use, colorized based on the return value
-of the
+# Return the prompt symbol to use, colorized based on the return value of the
 # previous command.
 function set_prompt_symbol () {
   if test $1 -eq 0 ; then
@@ -164,8 +161,7 @@ function set_prompt_symbol () {
  
 # Set the full bash prompt.
 function set_bash_prompt () {
-  # Set the PROMPT_SYMBOL variable. We do this first so we don't lose
-the 
+  # Set the PROMPT_SYMBOL variable. We do this first so we don't lose the 
   # return value of the last command.
   set_prompt_symbol $?
  
