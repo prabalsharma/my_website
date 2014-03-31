@@ -10,7 +10,8 @@ Cohort 2
 Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
 | 
 [Pro Git](http://git-scm.com/book) | 
-[Git Config](http://cheat.errtheblog.com/s/git)  
+[Git Config](http://cheat.errtheblog.com/s/git) | 
+[PART2_Config](PART2_Config.md)   
   
 __Getting Started__  
 In the terminal start by creating a new directory, then run `git init`
