@@ -185,3 +185,13 @@ the
 # Tell bash to execute this function just before displaying its prompt.
 PROMPT_COMMAND=set_bash_prompt
 ```
+
+## Git Config Settings
+
+Global and Local config settings allow us to specify if we want to use
+the same default settings on all projects (Global), or *override* those
+settings locally.  
+  
+To view your current settings run `git config --list`
+
+## Add Remote Repositories
