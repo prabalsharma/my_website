@@ -1,5 +1,5 @@
 # Git and GitHub: Configuration  
-[.bashrc](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html) |   
+[.bashrc](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html) | [Settings the PS1](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/setps.html) |  
 Global and Local settings allow us to customize particular
 repositories.  
 
@@ -39,5 +39,8 @@ output colors, etc.
 We can customize the command prompt in Bash using PS1="something". To
 see the current code behind your prompt, try `echo $PS1`.  
   
-To set up the PS1 with
+You can make your command prompt look different for the current session
+with `PS1="Hello: "`. We can set up our command line to give more
+[meaningful
+information](http://www.thegeekstuff.com/2008/09/bash-shell-ps1-10-examples-to-make-your-linux-prompt-like-angelina-jolie/). For example, if we wish to show the current git branch we are on, and its status, we can use a script like this. 
 
