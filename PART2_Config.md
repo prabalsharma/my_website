@@ -192,6 +192,53 @@ Global and Local config settings allow us to specify if we want to use
 the same default settings on all projects (Global), or *override* those
 settings locally.  
   
-To view your current settings run `git config --list`
+To view your current settings run `git config --list`. By default, you
+will be using your global settings. If you haven't set them up yet, or
+if you want to change them, you can set your username and email (this
+will be associated with any commits you make).  
+```bash
+git config global u.name drew
+git config global u.email drew@drewbro.com
 
-## Add Remote Repositories
+# or locally
+git config local u.name drew
+git config local u.email 123and@gmail.com
+```  
+Similarly, to set git to a color user interface, you can run `git config
+--global color.ui true`.  
+  
+
+View settings files globally `cat ~/.gitconfig` or locally
+`.git/config`.  
+
+## Add Remote Repositories  
+If you already have remote repositories set up, you can see them by
+running the command `git remote -v`. This will display all remote
+repositories you are currently connected to. Git has a Master branch,
+and by default, we call our remote repository 'origin'. However, if you
+have multiple remotes, you will have different names for each.  
+  
+For example, if you have a remote repository on heroku, it will be
+called 'heroku' rather than remote. An example list of remote repose may
+look like this  
+```bash
+bb https://drewbro@bitbucket.org/drewbro/my_website.git (fetch)
+bb https://drewbro@bitbucket.org/drewbro/my_website.git (push)
+gh git@github.com:ogryzek/my_website.git (fetch)
+gh git@github.com:ogryzek/ogryzek/my_website.git (push)
+heroku git@heroku.com:my_website.git (fetch)
+heroku git@heroku.com:my_website.git (push)
+```  
+  
+## Push, Pull, Merge, Fetch & Rebase  
+Locally, we can create a new branch and checkout to it with `git
+checkout -b my_branch`. After we've made changes we are satisfied with,
+we can add and commit then, then checkout to the Master branch and
+merge: `git merge my_branch`.  
+  
+When working with remote repos, especially in collaboration with other, we often push our branch up to the
+remote, then request that it be merged to the master branch.  
+  
+If we want to pull any changes that may have been merged with master
+since we last pulled from the remote origin, we can do `git pull origin
+master`.
